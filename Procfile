@@ -1,1 +1,1 @@
-worker: python VACCINEAVAIL.py
+web: gunicorn VACCINEAVAIL.wsgi
