@@ -24,7 +24,7 @@ def fetch_data_for_state(district_ids):
 def extract_availability_data(response):
     response_json = response.json()
     for center in response_json["sessions"]:
-        if center["available_capacity_dose1"] >0 and center["min_age_limit"]== 18:
+        if center["available_capacity_dose1"] >0 and center["min_age_limit"]== 45:
             message = "Pincode:{},Name:{},Slots:{},Minimum Age:{}".format(center["pincode"], center["name"],center["available_capacity_dose1"],center["min_age_limit"])
             send_message_telegram(message)
 
